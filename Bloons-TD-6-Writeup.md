@@ -192,3 +192,14 @@ ANSWER: Mobmaker
 ```
 Go to Practice Images spreadsheet (https://docs.google.com/spreadsheets/d/1cdVHtk4w5JDJCYy-EO2_ycr0ZqMgUyjFOVDn5Y8eGVw/edit?gid=0#gid=0), go to Linux tab, and scroll till you see the creator of Bloons TD 6.
 
+# Vulnerabilities:
+
+## Critical Services
+
+### OpenSSH
+
+SSH = Secure Shell, cryptographic network protocol that allows you to securely connect to and manage a remote computer over an unsecured network. 
+
+#### OpenSSH Root Login disabled - 6 pts
+
+Root is the default admin account in Linux and possess total power on a computer. The root user has access to all files, systems, and accounts on a device, so it's important that no one should be able to login remotely into root. You can do this with the command: sudo nano /etc/ssh/sshd_config. There, change the line to "Permit Root Login: no" and not commented out.
