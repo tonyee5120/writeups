@@ -139,3 +139,56 @@ ANSWER: 4200
 The easiest way to do it is to check which port the OpenSSH server is listening to rn. To do this, you can run the command sudo lsof -i -P | grep sshd. The Linux command lsof stands for list open files, which in this case lists all the open network connections. The -i filters for only internet and network files. The -P stops the lsof command from showing a port number instead of a service name. Lastly the “grep | sshd” is just using the grep command to search for sshd in the process. And when we run this:
 
 ![](img/btd6writeup1.png)
+
+## Forensic Question 3 Correct: 
+```
+
+- Instructions:
+
+- 1) Type the answer to the question in place of 
+- <Type Answer Here>
+
+- 2) Save the file (you will not get credit until the 
+- file is saved)
+
+- Example question (not scored):
+
+- What was the name of the Lone Ranger's horse?
+
+- ANSWER: <Type Answer Here>
+
+- After correctly answering the question, the example 
+- question would look like this:
+
+- What was the name of the Lone Ranger's horse?
+
+- ANSWER: Silver
+
+- If the question has more than one answer, place each 
+- answer on a separate line, for example:
+
+- What was the name of the Lone Ranger's horse?
+
+- ANSWER: Silver
+- ANSWER: Dusty
+
+- Remember to save the file after typing the answer.
+- The scored question appears below.
+
+- ===========================================================
+
+Creators of practice images put in a lot of time and effort,
+and are probably the only reason that you have niche and
+unique competition knowledge. These people work very hard
+just to enrich and educate the populus of High School
+Cybersecurity.
+
+Who is the creator of this practice image?
+
+( EXAMPLE: ANSWER: Max49 ) <- Username
+( EXAMPLE: ANSWER: Max49#9833 ) <- Discord tag
+
+ANSWER: Mobmaker
+```
+Go to Practice Images spreadsheet (https://docs.google.com/spreadsheets/d/1cdVHtk4w5JDJCYy-EO2_ycr0ZqMgUyjFOVDn5Y8eGVw/edit?gid=0#gid=0), go to Linux tab, and scroll till you see the creator of Bloons TD 6.
+
