@@ -18,20 +18,20 @@ Critical Services: OpenSSH
 Authorized Administrators and Users
 
 Authorized Administrators:
-dartmonkey (you)
-	password: monkey123!
-ninjamonkey
-	password: Seek!ngShurik3n
-boomerangmonkey
-	password: Gl@iveR!coch3t
-gluegunner
-	password: gluesoak
+dartmonkey (you) 
 
-Authorized Users:
-wizardmonkey
-dartlinggunner
-snipermonkey
-alchemistmonkey
-tackshooter
-spikefactory
-buccaneermonkey
+password: monkey123!
+
+ninjamonkey
+
+password: Seek!ngShurik3n
+
+boomerangmonkey
+	
+password: Gl@iveR!coch3t
+
+gluegunner
+
+password: gluesoak
+
+Authorized Users: wizardmonkey, dartlinggunner, snipermonkey, alchemistmonkey, tackshooter, spikefactory, buccaneermonkey
