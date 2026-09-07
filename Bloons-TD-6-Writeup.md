@@ -1,6 +1,6 @@
 # Bloons TD 6 Writeup
 
-Created by: StageKing (user: stageking5000). Updated version of Mobmaker's key: (https://drive.google.com/file/d/15bA9T38Lq7FYhLNJM2CkNV3hUXaga9WL/view).
+Created by: StageKing (user: stageking5000). Updated version of Mobmaker's original answer key, which can be found at (https://drive.google.com/file/d/15bA9T38Lq7FYhLNJM2CkNV3hUXaga9WL/view).
 
 ## Image README
 
