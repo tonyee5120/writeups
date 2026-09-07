@@ -85,4 +85,55 @@ What is the UID of user snipermonkey?
 
 ANSWER: 1006
 ```
+UID stands for User Identifier, which is the unique numerical value assigned by the operating system to every user account. The way to get a UID for a user is to run the id  -u command. So we type id -u snipermonkey into the terminal.
 
+## Forensic Question 2 Correct: 
+```
+
+- Instructions:
+
+- 1) Type the answer to the question in place of 
+- <Type Answer Here>
+
+- 2) Save the file (you will not get credit until the 
+- file is saved)
+
+- Example question (not scored):
+
+- What was the name of the Lone Ranger's horse?
+
+- ANSWER: <Type Answer Here>
+
+- After correctly answering the question, the example 
+- question would look like this:
+
+- What was the name of the Lone Ranger's horse?
+
+- ANSWER: Silver
+
+- If the question has more than one answer, place each 
+- answer on a separate line, for example:
+
+- What was the name of the Lone Ranger's horse?
+
+- ANSWER: Silver
+- ANSWER: Dusty
+
+- Remember to save the file after typing the answer.
+- The scored question appears below.
+
+- ===========================================================
+
+This device is configured to run OpenSSH, a common service 
+to remotely access systems. The OpenSSH daemon requires an 
+open port to talk to the clients through, which is standard
+of basically any online service. The port that is set can
+often be found in the configuration file of said service.
+
+What is the OpenSSH daemon's port?
+
+( EXAMPLE: ANSWER: 80 )
+
+ANSWER: 4200
+```
+The easiest way to do it is to check which port the OpenSSH server is listening to rn. To do this, you can run the command sudo lsof -i -P | grep sshd. The Linux command lsof stands for list open files, which in this case lists all the open network connections. The -i filters for only internet and network files. The -P stops the lsof command from showing a port number instead of a service name. Lastly the “grep | sshd” is just using the grep command to search for sshd in the process. And when we run this
