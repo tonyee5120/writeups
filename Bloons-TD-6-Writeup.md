@@ -39,37 +39,40 @@ Authorized Users: wizardmonkey, dartlinggunner, snipermonkey, alchemistmonkey, t
 
 # Forensic Questions
 
-Instructions:
+## Forensic Question 1 Correct: 
+```
 
-1) Type the answer to the question in place of 
-<Type Answer Here>
+- Instructions:
 
-2) Save the file (you will not get credit until the 
-file is saved)
+- 1) Type the answer to the question in place of 
+- <Type Answer Here>
 
-Example question (not scored):
+- 2) Save the file (you will not get credit until the 
+- file is saved)
 
-What was the name of the Lone Ranger's horse?
+- Example question (not scored):
 
-ANSWER: <Type Answer Here>
+- What was the name of the Lone Ranger's horse?
 
-After correctly answering the question, the example 
-question would look like this:
+- ANSWER: <Type Answer Here>
 
-What was the name of the Lone Ranger's horse?
+- After correctly answering the question, the example 
+- question would look like this:
 
-ANSWER: Silver
+- What was the name of the Lone Ranger's horse?
 
-If the question has more than one answer, place each 
-answer on a separate line, for example:
+- ANSWER: Silver
 
-What was the name of the Lone Ranger's horse?
+- If the question has more than one answer, place each 
+- answer on a separate line, for example:
 
-ANSWER: Silver
-ANSWER: Dusty
+- What was the name of the Lone Ranger's horse?
 
-Remember to save the file after typing the answer.
-The scored question appears below.
+- ANSWER: Silver
+- ANSWER: Dusty
+
+- Remember to save the file after typing the answer.
+- The scored question appears below.
 
 - -------------------------------------------------------- 
 
@@ -81,3 +84,5 @@ What is the UID of user snipermonkey?
 ( EXAMPLE: 1001 )
 
 ANSWER: 1006
+```
+
