@@ -226,4 +226,13 @@ boomerang monkey.
 
 In the README, it stated that there is a user called engineermonkey that just joined, so we need to create a profile for that user. This can be done in Settings by pressing Add User and entering the username engineermonkey and adding a password. It can also be done in terminal with the command: sudo adduser engineermonkey. 
 
+![](img/btd6writeup4.png)
 
+## Password Policy 
+Passwords are an important part of accounts as they are the primary way of entry. So, they must be of good length (8+ characters), have letters, numbers, and symbols, and be difficult to decipher.
+
+#### Changed insecure password for user gluegunner - 4 pts
+By examining the admin passwords, we can see that gluegunner has a very weak password that can be easily guessed by an automated password-cracking system. So, in order to fix this, we can go to Settings, click on gluegunner, and change the password to fulfill the security requirements. If you have a green password, you'll be fine.
+
+# Uncomplicated Firewall (UFW) has been enabled - 6 pts 
+UFW is the default firewall in Linux, but it is typically disabled upon fresh installation. 
