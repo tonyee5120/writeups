@@ -211,6 +211,8 @@ NOTE: For user auditing in Linux, many of the configurations can be done in eith
 
 Bloonarius is not an authorized user mentioned in the README for either group, so we can simply assume that it's a gateway into your network. To remove them, we can simply just delete them in Settings app, or from terminal with the command userdel bloonarius. 
 
+![](img/btd6writeup3.png)
+
 #### Removed unauthorized user icemonkey - 5 pts
 
 Icemonkey is not an authorized user mentioned in the README for either group, so again we can safely assume it's another fake user to act as a way into our device. Once again, either delete from the Settings app or from terminal with the command userdel icemonkey.
