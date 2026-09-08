@@ -203,3 +203,25 @@ SSH = Secure Shell, cryptographic network protocol that allows you to securely c
 #### OpenSSH Root Login disabled - 6 pts
 
 Root is the default admin account in Linux and possess total power on a computer. The root user has access to all files, systems, and accounts on a device, so it's important that no one should be able to login remotely into root. You can do this with the command: sudo nano /etc/ssh/sshd_config. There, change the line to "Permit Root Login: no" and not commented out.
+
+## User Auditing
+NOTE: For user auditing in Linux, many of the configurations can be done in either the Settings app or the command line. The command line more recommended to build familiarity and comfort with the operating system. Both versions of the solution will be listed for your convenience. 
+
+#### Removed unauthorized user bloonarius - 5 pts
+
+Bloonarius is not an authorized user mentioned in the README for either group, so we can simply assume that it's a gateway into your network. To remove them, we can simply just delete them in Settings app, or from terminal with the command userdel bloonarius. 
+
+#### Removed unauthorized user icemonkey - 5 pts
+
+Icemonkey is not an authorized user mentioned in the README for either group, so again we can safely assume it's another fake user to act as a way into our device. Once again, either delete from the Settings app or from terminal with the command userdel icemonkey.
+
+#### User boomerangmonkey is an admnistrator - 5 pts 
+
+Boomerangmonkey is listed as a user in the administrator group in the README. But in settings and /etc/group, he's listed as a standard user. So in order to make this right, we have to switch him to an administrator. This can be done in settings by clicking on boomerangmonkey in settings and selecting the Administrator button OR in the terminal with sudo usermod -aG sudo
+boomerang monkey. 
+
+#### Created user account engineermonkey - 5 pts
+
+In the README, it stated that there is a user called engineermonkey that just joined, so we need to create a profile for that user. This can be done in Settings by pressing Add User and entering the username engineermonkey and adding a password. It can also be done in terminal with the command: sudo adduser engineermonkey. 
+
+
