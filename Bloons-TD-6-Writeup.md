@@ -190,7 +190,7 @@ Who is the creator of this practice image?
 
 ANSWER: Mobmaker
 ```
-Go to Practice Images spreadsheet (https://docs.google.com/spreadsheets/d/1cdVHtk4w5JDJCYy-EO2_ycr0ZqMgUyjFOVDn5Y8eGVw/edit?gid=0#gid=0), go to Linux tab, and scroll till you see the creator of Bloons TD 6.
+Go to the Practice Images spreadsheet (https://docs.google.com/spreadsheets/d/1cdVHtk4w5JDJCYy-EO2_ycr0ZqMgUyjFOVDn5Y8eGVw/edit?gid=0#gid=0), go to the Linux tab, and scroll till you see the creator of Bloons TD 6.
 
 # Vulnerabilities:
 
@@ -198,38 +198,38 @@ Go to Practice Images spreadsheet (https://docs.google.com/spreadsheets/d/1cdVHt
 
 ### OpenSSH
 
-SSH = Secure Shell, cryptographic network protocol that allows you to securely connect to and manage a remote computer over an unsecured network. 
+SSH = Secure Shell, a cryptographic network protocol that allows you to securely connect to and manage a remote computer over an unsecured network. 
 
 #### OpenSSH Root Login disabled - 6 pts
 
-Root is the default admin account in Linux and possess total power on a computer. The root user has access to all files, systems, and accounts on a device, so it's important that no one should be able to login remotely into root. You can do this with the command: sudo nano /etc/ssh/sshd_config. There, change the line to "Permit Root Login: no" and not commented out.
+Root is the default admin account in Linux and possesses total power on a computer. The root user has access to all files, systems, and accounts on a device, so it's important that no one should be able to login remotely into root. You can do this with the command: sudo nano /etc/ssh/sshd_config. There, change the line to "PermitRootLogin: no" and not commented out.
 
 ## User Auditing
-NOTE: For user auditing in Linux, many of the configurations can be done in either the Settings app or the command line. The command line more recommended to build familiarity and comfort with the operating system. Both versions of the solution will be listed for your convenience. 
+NOTE: For user auditing in Linux, many of the configurations can be done in either the Settings app or the command line. The command line is more recommended to build familiarity and comfort with the operating system. Both versions of the solution will be listed for your convenience. 
 
 #### Removed unauthorized user bloonarius - 5 pts
 
-Bloonarius is not an authorized user mentioned in the README for either group, so we can simply assume that it's a gateway into your network. To remove them, we can simply just delete them in Settings app, or from terminal with the command userdel bloonarius. 
+Bloonarius is not an authorized user mentioned in the README for either group, so we can simply assume that it's a gateway into your network. To remove them, we can simply just delete them in the Settings app, or from the terminal with the command userdel bloonarius. 
 
 ![](img/btd6writeup3.png)
 
 #### Removed unauthorized user icemonkey - 5 pts
 
-Icemonkey is not an authorized user mentioned in the README for either group, so again we can safely assume it's another fake user to act as a way into our device. Once again, either delete from the Settings app or from terminal with the command userdel icemonkey.
+Icemonkey is not an authorized user mentioned in the README for either group, so again we can safely assume it's another fake user to act as a way into our device. Once again, either delete it from the Settings app or from the terminal with the command userdel icemonkey.
 
-#### User boomerangmonkey is an admnistrator - 5 pts 
+#### User boomerangmonkey is an administrator - 5 pts 
 
 Boomerangmonkey is listed as a user in the administrator group in the README. But in settings and /etc/group, he's listed as a standard user. So in order to make this right, we have to switch him to an administrator. This can be done in settings by clicking on boomerangmonkey in settings and selecting the Administrator button OR in the terminal with sudo usermod -aG sudo
-boomerang monkey. 
+Boomerang Monkey. 
 
 #### Created user account engineermonkey - 5 pts
 
-In the README, it stated that there is a user called engineermonkey that just joined, so we need to create a profile for that user. This can be done in Settings by pressing Add User and entering the username engineermonkey and adding a password. It can also be done in terminal with the command: sudo adduser engineermonkey. 
+In the README, it stated that there is a user called engineermonkey that just joined, so we need to create a profile for that user. This can be done in Settings by pressing Add User and entering the username engineermonkey, and adding a password. It can also be done in the terminal with the command: sudo adduser engineermonkey. 
 
 ![](img/btd6writeup4.png)
 
 ## Password Policy 
-Passwords are an important part of accounts as they are the primary way of entry. So, they must be of good length (8+ characters), have letters, numbers, and symbols, and be difficult to decipher.
+Passwords are an important part of accounts because they are the primary way to log in. So, they must be long (8+ characters), include letters, numbers, and symbols, and be hard to guess.
 
 #### Changed insecure password for user gluegunner - 4 pts
 By examining the admin passwords, we can see that gluegunner has a very weak password that can be easily guessed by an automated password-cracking system. So, in order to fix this, we can go to Settings, click on gluegunner, and change the password to fulfill the security requirements. If you have a green password, you'll be fine.
@@ -237,4 +237,18 @@ By examining the admin passwords, we can see that gluegunner has a very weak pas
 # Uncomplicated Firewall (UFW) has been enabled - 6 pts 
 UFW is the default firewall in Linux, but it is typically disabled upon fresh installation. For this case, the UFW package isn't even installed on the machine So in order to enable it, do sudo apt install ufw + sudo enable ufw. However, there are some technical complications for this image that I encountered when trying to complete it the second time around. I will show you what they were and how to naviagte them to still max the image. 
 
-If you try to enable or install ufw, it will either say it's not on the machine or package unavailable. The reason for this is because Debian 10 reached End of Life (EOL) on June 30, 2024. End of life means that an operating system version will no longer receive security updates, bug fixes, or tech support. For the image, because it reached End of Life, you can't access the UFW package the way you would be able to on a present-day Linux device. This is slightly irritating, but there's a way around this. You can go into the sources for packages and update the package links. That way, the system works properly and you also have all updates packages.
+If you try to enable or install ufw, it will either say it's not on the machine or package unavailable. The reason for this is because Debian 10 reached End of Life (EOL) on June 30, 2024. End of life means that an operating system version will no longer receive security updates, bug fixes, or tech support. For the image, because it reached End of Life, you can't access the UFW package the way you would be able to on a present-day Linux device. This is slightly irritating, but there's a way around this. You can go into the sources for packages and update the package links. That way, the system works properly, and you also have all package updates.
+
+How to do this: First, go to the sources list by typing sudo nano /etc/apt/sources.list. I personally removed everything in the file and replaced it with these two links: 
+
+deb http://archive.debian.org/debian/ buster main contrib non-free 
+
+deb http://archive.debian.org/debian-security buster/updates main contrib non free
+
+For other people, you may only need to change the current links that are there. After you're done, type Ctrl+O, Enter, and Ctrl+X to close the nano file. You should now be able to update and install any remaining packages. If so, do sudo apt install ufw, followed by sudo ufw enable. 
+
+
+# Firefox blocks dangerous downloads - 6 pts
+
+Browser protection is significantly important when it comes to operating system security is important, so
+
