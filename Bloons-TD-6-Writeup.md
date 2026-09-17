@@ -249,6 +249,12 @@ For other people, you may only need to change the current links that are there. 
 
 
 # Firefox blocks dangerous downloads - 6 pts
+Browser protection is significantly important when it comes to operating system security is important, so there's typically a setting to enable it in almost every browser. For Firefox and this image, go to Firefox's settings. Then, go to "Privacy and Security". Scroll down to the bottom and check the boxes for "Block dangerous and deceptive content" and all sub-checks. 
 
-Browser protection is significantly important when it comes to operating system security is important, so
+# FTP has been installed - 6 pts
+Standard FTP in Linux send passwords in plaintext, and if intercepted in transit, then you would lose a tremendous amount of personal info and hackers can potentially steal your log in credentials. To do this, run the command sudo apt purge vsftpd in your terminal. 
+
+
+
+
 
