@@ -39,7 +39,7 @@ Authorized Users: wizardmonkey, dartlinggunner, snipermonkey, alchemistmonkey, t
 
 # Forensic Questions
 
-## Forensic Question 1 Correct: 
+## Forensic Question 1 Correct (7 pts): 
 ```
 
 - Instructions:
@@ -87,7 +87,7 @@ ANSWER: 1006
 ```
 UID stands for User Identifier, which is the unique numerical value assigned by the operating system to every user account. The way to get a UID for a user is to run the id  -u command. So we type id -u snipermonkey into the terminal.
 
-## Forensic Question 2 Correct: 
+## Forensic Question 2 Correct (7 pts): 
 ```
 
 - Instructions:
@@ -140,7 +140,7 @@ The easiest way to do it is to check which port the OpenSSH server is listening 
 
 ![](img/btd6writeup1.png)
 
-## Forensic Question 3 Correct: 
+## Forensic Question 3 Correct (7 pts): 
 ```
 
 - Instructions:
@@ -255,13 +255,46 @@ For other people, you may only need to change the current links that are there. 
 Browser protection is significantly important when it comes to operating system security is important, so there's typically a setting to enable it in almost every browser. For Firefox and this image, go to Firefox's settings. Then, go to "Privacy and Security". Scroll down to the bottom and check the boxes for "Block dangerous and deceptive content" and all sub-checks. 
 
 # FTP has been installed - 6 pts
-Standard FTP in Linux send passwords in plaintext, and if intercepted in transit, then you would lose a tremendous amount of personal info and hackers can potentially steal your log in credentials. To do this, run the command sudo apt purge vsftpd in your terminal. 
+Standard FTP in Linux sends passwords in plaintext, and if intercepted in transit, you would lose a tremendous amount of personal info, and hackers can potentially steal your login credentials. To do this, run the command sudo apt purge vsftpd in your terminal. 
 
 ## Policy Violation: Unwanted Software
-Unwanted software is one of the vulnerabilities categories in the CyberPatriot competition. This category has to do with you guessed it, unwanted software on devices. This can come in the form of games, servers, scareware, adware, or "hacking" tools. Unless otherwise stated, these applications should all be deleted from a virtual machine. 
+Unwanted software is one of the vulnerability categories in the CyberPatriot competition. This category has to do with you guessed it, unwanted software on devices. This can include games, servers, scareware, adware, or "hacking" tools. Unless otherwise stated, delete these applications from a virtual machine. 
 
-### Prohibited software Wireshark removed - 4 pts
-Wireshark is a free, open source network packet protocol analyzer that captures and lists data traveling over a computer network in real time
+### Prohibited software: Wireshark removed - 4 pts
+Wireshark is a free, open-source network packet protocol analyzer that captures and lists data traveling over a computer network in real time. It is one of the most notable "hacking tools," and the README mentions not wanting these on the machine. To remove this, run the command: sudo apt remove wireshark. 
+
+### Prohibited software: Zenmap removed - 4 pts
+Zenmap is the official open-source graphical user interface (GUI), and it allows users to develop a basic UI for Nmap commands, scan profiles, examine the network topology, and show comparisons for changes in the network. It is another hacking tool that needs to be removed. This can be done with sudo apt purge zenmap. 
+
+### Prohibited software: Game Conqueror removed - 4 pts
+GameConqueror is a graphical user interface (GUI) for the Linux command Scanmem, which is a debugging utility in Linux that can be used to find variables in processes that are running. This can be exploited to find cheat codes in video games and is a game-hacking tool. To remove this, type the command: sudo apt purge gameconqeueror.
+
+# Daily updates on the machine are enabled - 5 pts
+Updates and patches are constantly being made, and they must always be up to date. To enable this, go to the Software & Updates application, click on the Updates tab, and set "Automatically check for updates:" to Daily. Alternatively, you can do this via the terminal. Type the commands sudo apt update, followed by sudo apt install unattended-upgrades. Then, to configure automatic updates, type the command sudo dpkg-reconfigure --priority=low unattended-upgrades. Finally, enable the service with sudo systemctl enable --now unattended-upgrades. 
+
+# Important security updates are selected - 5 pts
+Security updates are important because they are a vital part of making sure that your device isn't susceptible to being compromised. To enable this, go to Software & Updates, click on the Updates tab, and check "Security updates (buster/updates)" under "Install
+updates from:". Terminal method: sudo apt update && sudo apt upgrade -y. Install the unattended upgrades package with sudo apt install unattended-upgrades -y. Configure automatic updates with sudo dpkg-reconfigure --priority=low unattended-upgrades. To check this, cd /etc/apt/apt.conf.d/20auto-upgrades to ensure automatic checking/installing are both enabled (set to 1). 
+
+# Prohibited photo files have been removed - 4 pts
+The README states that any unauthorized media should not be on the machine, so all users' files should be thoroughly checked and searched to ensure that there are no downloades on devices. If you go to the /home directory, you can use the ls command to list all the users. By doing cd /home/spikefactory, you will see a folder called important. If we list the contents with ls: 
+
+![](img/btd6writeup5.png)
+
+To remove all the purple files (which are unauthorized media), you can remove the folder with the command “sudo rm -r important”. The -r parameter is a recursive flag that removes the folder and all of its contents. 
+
+# Prohibited video files removed from dartlinggunner - 4 pts
+If you go to the /home directory and cd into dartlinggunner's folder, you come across some .mp4 files in the Videos folder. To remove them, simply do sudo rm for each .mp4 file. 
+
+# End of Writeup
+Congrats! If you've followed all these directions, then your answer key should look like this. You've completed the first Linux image in your journey! Now go do more!
+
+![](img/AnswerKey.png)
+
+
+
+
+
 
 
 
