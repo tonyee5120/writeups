@@ -226,6 +226,9 @@ Boomerang Monkey.
 
 In the README, it stated that there is a user called engineermonkey that just joined, so we need to create a profile for that user. This can be done in Settings by pressing Add User and entering the username engineermonkey, and adding a password. It can also be done in the terminal with the command: sudo adduser engineermonkey. 
 
+#### Dartlinggunner is not an administrator - 5 pts
+In the README, it lists dartlingguner as a user underneath the authorized users sections. But if you go into /etc/group and type the command "groups dartlinggunner", it'll show dartlinggunner as a user in the sudo group. The sudo group is reserved for administrators only, so we need to remove dartlinggunner from this group. To do this in Debian, type the command sudo deluser dartlinggunner sudo. The parameters are the second sudo (group) and deluser (command to delete a user). 
+
 ![](img/btd6writeup4.png)
 
 ## Password Policy 
@@ -253,6 +256,12 @@ Browser protection is significantly important when it comes to operating system 
 
 # FTP has been installed - 6 pts
 Standard FTP in Linux send passwords in plaintext, and if intercepted in transit, then you would lose a tremendous amount of personal info and hackers can potentially steal your log in credentials. To do this, run the command sudo apt purge vsftpd in your terminal. 
+
+## Policy Violation: Unwanted Software
+Unwanted software is one of the vulnerabilities categories in the CyberPatriot competition. This category has to do with you guessed it, unwanted software on devices. This can come in the form of games, servers, scareware, adware, or "hacking" tools. Unless otherwise stated, these applications should all be deleted from a virtual machine. 
+
+### Prohibited software Wireshark removed - 4 pts
+Wireshark is a free, open source network packet protocol analyzer that captures and lists data traveling over a computer network in real time
 
 
 
